@@ -13,6 +13,17 @@ const randomMessages = [
 "“Write it. Shoot it. Publish it. Crochet it. Sauté it. Whatever. MAKE.” —Joss Whedon"
 ]
 
+const images = [
+    'istockphoto-1082721304-612x612.jpg',
+    'istockphoto-1189860501-612x612.jpg',
+    'inspiring-motivational-quotes-jpg.jpg',
+    'istockphoto-1255203350-612x612.jpg',
+    'photo-1520371764250-8213f40bc3ed.jpg',
+    'getty_696209402_2000133320009280405_375492.jpg',
+    'inspirational-leadership-2-min.png',
+    'photo-1611934180042-da791b4091e7.jpg'
+]
+
 function returnRandom(inputArray){
     return inputArray[Math.floor(Math.random() * inputArray.length)];
 }
@@ -20,4 +31,5 @@ const node = document.createElement("h2");
 const textnode = document.createTextNode(returnRandom(randomMessages));
 node.appendChild(textnode);
 
-document.getElementsByTagName('body')[0].appendChild(node);
+document.getElementById("generator").appendChild(node);
+document.getElementById("generator").setAttribute('style', `background-image: url('resources/img/${returnRandom(images)}')`);

@@ -2,3 +2,25 @@
     box-sizing: border-box;
 }
 
+header{
+    max-width: 1200px;
+    height: 600px;
+    margin: 0 auto;
+}
+#generator{
+    margin: 0 auto;
+    width: 600px;
+    height: 600px;
+    background-color: gray;
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#generator h2{
+    text-shadow: 1px 1px 3px black;
+}
+
