@@ -14,7 +14,7 @@ const randomMessages = [
 ]
 
 function returnRandom(inputArray){
-    return Math.floor(Math.random() * inputArray.length);
+    return inputArray[Math.floor(Math.random() * inputArray.length)];
 }
 const node = document.createElement("h2");
 const textnode = document.createTextNode(returnRandom(randomMessages));
