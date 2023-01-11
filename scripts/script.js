@@ -27,9 +27,35 @@ const images = [
 function returnRandom(inputArray){
     return inputArray[Math.floor(Math.random() * inputArray.length)];
 }
+/* const element = document.getElementById("generator");
 const node = document.createElement("h2");
 const textnode = document.createTextNode(returnRandom(randomMessages));
 node.appendChild(textnode);
 
-document.getElementById("generator").appendChild(node);
-document.getElementById("generator").setAttribute('style', `background-image: url('resources/img/${returnRandom(images)}')`);
+element.appendChild(node);
+element.setAttribute('style', `background-image: url('resources/img/${returnRandom(images)}')`); */
+
+function insertElement(modify, create, inputText, styleTag, styles){
+    const element = document.getElementById(modify);
+    const node = document.createElement(create);
+    const textnode = document.createTextNode(inputText);
+    node.appendChild(textnode);
+    if(element.children.length === 0){
+        element.appendChild(node);
+        
+    }else{
+        element.replaceChild(node, element.childNodes[1])
+        
+    }
+    element.setAttribute(styleTag, styles);
+}
+
+let hasRun = false;
+
+function clickMe(){
+    insertElement("generator", "h2", returnRandom(randomMessages), "style", `background-image: url('resources/img/${returnRandom(images)}')`);
+}
+if(hasRun === false){
+    clickMe();
+    hasRun = true;   
+}

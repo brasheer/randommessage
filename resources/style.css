@@ -1,11 +1,20 @@
 *, ::before, ::after{
     box-sizing: border-box;
 }
-
+body{
+    background-color: gray;
+}
 header{
     max-width: 1200px;
-    height: 600px;
+    height: min-content;
     margin: 0 auto;
+    text-align: center;
+    background-color: antiquewhite;
+}
+h1{
+    margin-bottom: 0;
+    padding: 10px;
+    background-color: white;
 }
 #generator{
     margin: 0 auto;
@@ -13,7 +22,7 @@ header{
     height: 600px;
     background-color: gray;
     color: white;
-    padding: 10px;
+    padding:  0 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -22,5 +31,9 @@ header{
 }
 #generator h2{
     text-shadow: 1px 1px 3px black;
+    padding: 0 20px;
+}
+header button{
+    margin: 5px;
 }
 
